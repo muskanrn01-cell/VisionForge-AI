@@ -1,134 +1,69 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white scroll-smooth">
-      {/* Navbar */}
-      <nav className="flex justify-between items-center px-8 py-6 border-b border-zinc-800">
-        <h1 className="text-2xl font-bold">VisionForge AI</h1>
-
-        <div className="flex gap-6">
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <Image
+          className="dark:invert h-5 w-[100px]"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={100}
+          height={20}
+          priority
+        />
+        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+            To get started, edit the{" "}
+            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+              page.tsx
+            </code>{" "}
+            file.
+          </h1>
+          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+            Looking for a starting point or more instructions? Head over to{" "}
+            <a
+              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              className="font-medium text-zinc-950 dark:text-zinc-50"
+            >
+              Templates
+            </a>{" "}
+            or the{" "}
+            <a
+              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              className="font-medium text-zinc-950 dark:text-zinc-50"
+            >
+              Learning
+            </a>{" "}
+            center.
+          </p>
         </div>
-      </nav>
-
-      {/* Hero */}
-      <section className="text-center py-32 px-6">
-        <h1 className="text-6xl font-bold mb-6">
-          Build Smarter With AI
-        </h1>
-
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-          Generate content, images, ideas and productivity workflows
-          using the power of Artificial Intelligence.
-        </p>
-
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
-            href="#pricing"
-            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Start Free
+            <Image
+              className="dark:invert h-[14px] w-4"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={16}
+              height={14}
+            />
+            Deploy Now
           </a>
-
           <a
-            href="#features"
-            className="px-6 py-3 rounded-xl border border-gray-600"
+            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Learn More
+            Documentation
           </a>
         </div>
-      </section>
-
-      {/* Features */}
-      <section
-        id="features"
-        className="grid md:grid-cols-3 gap-6 px-8 py-20"
-      >
-        <div className="bg-zinc-900 p-6 rounded-2xl">
-          <h2 className="text-xl font-semibold mb-2">
-            AI Text Generator
-          </h2>
-          <p className="text-gray-400">
-            Create blogs, captions and articles instantly.
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-6 rounded-2xl">
-          <h2 className="text-xl font-semibold mb-2">
-            AI Image Creator
-          </h2>
-          <p className="text-gray-400">
-            Generate stunning AI images in seconds.
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-6 rounded-2xl">
-          <h2 className="text-xl font-semibold mb-2">
-            AI Assistant
-          </h2>
-          <p className="text-gray-400">
-            Automate tasks and get instant answers.
-          </p>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section
-        id="pricing"
-        className="py-24 px-8 text-center"
-      >
-        <h2 className="text-4xl font-bold mb-12">
-          Pricing Plans
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-zinc-900 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold">Free</h3>
-            <p className="text-4xl mt-4">₹0</p>
-            <p className="text-gray-400 mt-2">
-              Basic AI access
-            </p>
-          </div>
-
-          <div className="bg-blue-600 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold">Pro</h3>
-            <p className="text-4xl mt-4">₹499</p>
-            <p className="mt-2">
-              Advanced AI features
-            </p>
-          </div>
-
-          <div className="bg-zinc-900 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold">Enterprise</h3>
-            <p className="text-4xl mt-4">Custom</p>
-            <p className="text-gray-400 mt-2">
-              For businesses
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section
-        id="contact"
-        className="py-24 px-8 text-center"
-      >
-        <h2 className="text-4xl font-bold mb-6">
-          Contact Us
-        </h2>
-
-        <p className="text-gray-400 mb-8">
-          Ready to build with AI? Get in touch.
-        </p>
-
-        <a
-          href="mailto:muskanrn01@gmail.com"
-          className="bg-blue-600 px-6 py-3 rounded-xl"
-        >
-          Send Email
-        </a>
-      </section>
-    </main>
+      </main>
+    </div>
   );
 }
